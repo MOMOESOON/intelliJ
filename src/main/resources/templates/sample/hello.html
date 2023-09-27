@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/test.css}">
 </head>
 <body>
 <h3>타임리프 템플릿 : spring el 테스트</h3>
@@ -18,6 +19,22 @@
     <th:block th:each="str,status:${list}">
         <li>[[${str}]] - [[${status.index}]] </li>
     </th:block>
+</ul>
+<hr/>
+<h3>타임리프 링크 link 테스트</h3>
+<ul>
+    <li><a th:href="@{/spring(name='momo',age=24)}">
+        go SPRING1
+        </a>
+    </li>
+    <li><a th:href="@{spring(name='momo',age=24)}">
+        go SPRING2
+        </a>
+    </li>
+    <li><a th:href="@{spring}">
+        go SPRING3
+    </a>
+    </li>
 </ul>
 </body>
 </html>
