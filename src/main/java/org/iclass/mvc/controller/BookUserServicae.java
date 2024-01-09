@@ -10,7 +10,9 @@ import java.util.Map;
 
 @Service
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)//생성자 접근권한
-public class BookUserServicae {
+public class
+
+BookUserServicae {
     private final BookUserMapper dao;
     public int join(BookUser dto){
         return dao.insert(dto);
